@@ -9,19 +9,15 @@ const DashboardHeader = () => {
   });
 
   return (
-    <div className="flex items-center justify-between px-8 pt-6 pb-4">
-      {/* Left: Date */}
+    <div className="flex items-center justify-between px-8">
       <h2 className="text-xl font-semibold text-neutral">{today}</h2>
 
-      {/* Right: Buttons */}
       <div className="flex space-x-4">
-        {/* Auto Questionnaire Button */}
-        <button className="border border-primary text-primary px-4 py-2 rounded-lg hover:bg-primary hover:text-white transition">
+        <button className="border border-primary text-primary px-6 py-1 rounded-lg hover:bg-primary hover:text-white transition">
           Auto Questionnaire
         </button>
 
-        {/* Add Job Button */}
-        <button className="bg-primary text-white px-4 py-2 rounded-lg hover:bg-accent transition">
+        <button className="bg-primary text-white px-6 py-1 rounded-lg hover:bg-accent transition">
           + Add Job
         </button>
       </div>

@@ -9,7 +9,7 @@ import PaymentsSummary from '../components/PaymentsSummary';
 
 const Dashboard = () => {
     return (
-        <div className="p-6 space-y-6">
+        <div className="p-6 space-y-6 bg-blue-50">
             <DashboardHeader />
 
             <div className="flex flex-wrap ">

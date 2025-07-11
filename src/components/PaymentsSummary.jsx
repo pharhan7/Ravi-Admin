@@ -12,18 +12,24 @@ const PaymentsSummary = () => {
   return (
     <div className="space-y-4 mt-4">
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
-        {boxes.slice(0, 3).map((box, idx) => (
-          <div key={idx} className={`${box.color} ${box.text} rounded-lg p-4 text-center shadow`}>
-            <div className="font-bold">{box.amount}</div>
+        {boxes.slice(0, 3).map((box, id) => (
+          <div
+            key={id}
+            className={`${box.color} ${box.text} rounded-lg p-4 text-center shadow min-h-[100px] flex flex-col justify-center`}
+          >
+            <div className="font-bold text-lg">{box.amount}</div>
             <div className="text-sm">{box.label}</div>
           </div>
         ))}
       </div>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-        {boxes.slice(3).map((box, idx) => (
-          <div key={idx} className={`${box.color} ${box.text} rounded-lg p-4 text-center shadow`}>
-            <div className="font-bold">{box.amount}</div>
+        {boxes.slice(3).map((box, id) => (
+          <div
+            key={id}
+            className={`${box.color} ${box.text} rounded-lg p-4 text-center shadow min-h-[100px] flex flex-col justify-center`}
+          >
+            <div className="font-bold text-lg">{box.amount}</div>
             <div className="text-sm">{box.label}</div>
           </div>
         ))}

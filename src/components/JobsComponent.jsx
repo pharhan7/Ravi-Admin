@@ -1,3 +1,4 @@
+
 const JobsComponent = ({ title, jobs, filter = false, onJobClick }) => {
   return (
     <div className="bg-white rounded-xl shadow p-4 space-y-4">
@@ -15,21 +16,23 @@ const JobsComponent = ({ title, jobs, filter = false, onJobClick }) => {
 
       {/* Job Cards */}
       <div className="space-y-3">
-        {jobs.map((job, id) => (
+        {jobs.map((job) => (
           <div
-            key={id}
-            className={`p-4 rounded-lg shadow-sm ${job.color || 'bg-secondary'} flex flex-col cursor-pointer hover:shadow-md transition`}
+            key={job.id}
+            className="bg-white rounded-xl border border-gray-200 shadow-sm p-4 flex flex-col gap-1 cursor-pointer hover:shadow transition duration-200"
             onClick={() => onJobClick?.(job)}
           >
-            <span className="text-sm font-semibold text-primary">Job Id</span>
-            <span className="text-md font-bold text-neutral">{job.id}</span>
-            <span className="text-xs text-neutral">Job Scheduled</span>
-            <span className="text-sm text-neutral">{job.time}</span>
+            <div className="flex justify-between items-center">
+              <div className="text-sm font-medium text-neutral-500">Job Id</div>
+              <div className="text-xs text-neutral-400">{job.time}</div>
+            </div>
+
+            <div className="text-base font-semibold text-neutral-800">{job.id}</div>
 
             <button
-              className="mt-2 text-sm text-accent underline text-left hover:text-primary transition"
+              className="text-sm text-primary font-medium underline text-left hover:text-blue-600 transition"
               onClick={(e) => {
-                e.stopPropagation(); 
+                e.stopPropagation();
                 onJobClick?.(job);
               }}
             >
@@ -37,13 +40,19 @@ const JobsComponent = ({ title, jobs, filter = false, onJobClick }) => {
             </button>
 
             {job.technician && (
-              <span className="text-xs italic text-neutral mt-1">
-                Technician: {job.technician}
-              </span>
+              <div className="flex items-center mt-2 space-x-2">
+                <img
+                  src={job.technicianAvatar || `https://i.pravatar.cc/100?u=${job.technician}`}
+                  alt="technician"
+                  className="w-6 h-6 rounded-full object-cover"
+                />
+                <span className="text-xs text-neutral-600 italic">{job.technician}</span>
+              </div>
             )}
           </div>
         ))}
       </div>
+
     </div>
   );
 };
