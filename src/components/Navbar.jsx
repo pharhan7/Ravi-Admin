@@ -11,12 +11,12 @@ const Navbar = () => {
         <div className="text-primary font-bold text-xl">Dashboard</div>
 
         <ul className="hidden md:flex flex-1 justify-center space-x-6 text-neutral font-medium">
-          <Link to="/">Dashboard</Link>
-          <Link to="/jobs">Jobs</Link>
-          <Link to="/technicians">Technicians</Link>
-          <Link to="/calendar">Calendar</Link>
-          <Link to="/customer">Customer</Link>
-          <Link to="/invoices">Invoices & Payments</Link>
+          <Link to="/" className="hover:text-primary">Dashboard</Link>
+          <Link to="/jobs" className="hover:text-primary">Jobs</Link>
+          <Link to="/technicians" className="hover:text-primary ">Technicians</Link>
+          <Link to="/calendar" className="hover:text-primary ">Calendar</Link>
+          <Link to="/customer" className="hover:text-primary ">Customer</Link>
+          <Link to="/invoices" className="hover:text-primary">Invoices & Payments</Link>
         </ul>
 
         <div className="hidden md:flex items-center justify-end w-10 h-10 rounded-full overflow-hidden border-2 border-primary shadow-md">
