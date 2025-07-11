@@ -19,7 +19,6 @@ const Navbar = () => {
   return (
     <nav className="bg-white shadow-md px-6 md:px-12 py-4">
       <div className="flex items-center justify-between">
-        {/* Nav links */}
         <ul className="hidden md:flex space-x-10 font-medium text-gray-600">
           {navItems.map((item) => (
             <li key={item.path} className="relative">
@@ -38,7 +37,6 @@ const Navbar = () => {
           ))}
         </ul>
 
-        {/* Avatar */}
         <div className="hidden md:flex items-center justify-end w-10 h-10 rounded-full overflow-hidden border-2 border-blue-600 shadow-md">
           <img
             src={`https://i.pravatar.cc/150?img=${Math.floor(Math.random() * 70) + 1}`}
@@ -47,7 +45,6 @@ const Navbar = () => {
           />
         </div>
 
-        {/* Mobile Menu Toggle */}
         <div className="md:hidden">
           <button
             onClick={() => setMenuOpen(!menuOpen)}
@@ -59,7 +56,6 @@ const Navbar = () => {
         </div>
       </div>
 
-      {/* Mobile Nav */}
       {menuOpen && (
         <div className="md:hidden mt-4 space-y-2 text-gray-700 font-medium">
           {navItems.map((item) => (

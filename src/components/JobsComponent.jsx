@@ -14,7 +14,6 @@ const JobsComponent = ({ title, jobs, filter = false, onJobClick }) => {
         )}
       </div>
 
-      {/* Job Cards */}
       <div className="space-y-3">
         {jobs.map((job) => (
           <div

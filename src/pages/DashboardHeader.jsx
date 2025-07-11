@@ -1,7 +1,6 @@
 import React from 'react';
 
 const DashboardHeader = () => {
-  // Format today's date (e.g., Thursday, 11 July)
   const today = new Date().toLocaleDateString('en-GB', {
     weekday: 'long',
     day: '2-digit',
